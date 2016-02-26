@@ -1,0 +1,29 @@
+<div class="saved">
+  <h1>Opgeslagen</h1>
+
+  <div class="sort-options">
+    <ul>
+      <li class="sort" id="recent">Recent</li>
+      <li class="sort" id="prijs_aflopend">Prijs ▼</li>
+      <li class="sort" id="prijs_oplopend">Prijs ▲</li>
+    </ul>
+  </div>
+
+  <div class="object-container">
+    {{#.}}
+      <div class="object">
+        <a href="#object/{{ InternalId }}">
+          <img src="{{ Media.0.MediaItems.3.Url }}" alt="{{ Adres }}">
+
+          <div class="info-container">
+            <div class="info">
+              <span class="straat">{{ Adres }}</span>
+              <span class="extra">{{ Postcode }} {{ Plaats }}</span>
+              <span class="prijs">{{{ PrijsGeformatteerd }}}</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    {{/.}}
+  </div>
+</div>
