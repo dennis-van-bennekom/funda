@@ -1,0 +1,25 @@
+<div class="home">
+  <h1>Woningen in de buurt</h1>
+
+  <div class="object-container">
+    {{#.}}
+      <div class="object">
+        <a href="#object/{{ Id }}">
+          <img src="{{ FotoLargest }}" alt="{{ Adres }}">
+
+          <div class="info-container">
+            <div class="info">
+              <span class="straat">{{ Adres }}</span>
+              <span class="extra">{{ Postcode }} {{ Woonplaats }}</span>
+              <span class="prijs">{{{ PrijsGeformatteerdHtml }}}</span>
+            </div>
+            <div class="distance">
+              <span>{{ Distance }}</span>
+              <span>{{ Duration }}</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    {{/.}}
+  </div>
+</div>

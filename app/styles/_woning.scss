@@ -1,0 +1,146 @@
+.woning {
+  margin-top: 1rem;
+
+  h1 {
+    margin: 0;
+    padding: 1rem 0;
+
+    font-family: 'proxima nova';
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .content {
+    margin: 1rem auto;
+    max-width: 50rem;
+    width: calc(100% - 2rem);
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
+
+     .image > img {
+      display: block;
+      width: 100%;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .info .prijs {
+      display: block;
+      flex-grow: 1;
+      padding: 1rem;
+    }
+
+    .info .like {
+      margin-right: 1rem;
+
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+
+        fill: #ccc;
+
+        transition: fill 0.1s ease-in-out, transform 0.1s ease-in-out;
+      }
+
+      svg:hover {
+        cursor: pointer;
+
+        fill: #aaa;
+      }
+    }
+
+    .info .like.liked svg {
+      fill: #F8B000;
+      transform: scale(1.2);
+    }
+
+    .description {
+      padding: 1rem;
+      line-height: 1.4;
+    }
+
+    .funda {
+
+      text-align: center;
+
+      background: #3888C5;
+
+      a {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+
+        color: #fff;
+      }
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .google {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 40rem) {
+    .google {
+      flex-direction: row;
+    }
+
+    #panel {
+      width: 40%;
+    }
+
+    #map {
+      width: 60%;
+    }
+  }
+
+  .route-titel {
+    border-bottom: 1px solid #ccc;
+  }
+
+  #panel {
+    max-height: 20rem;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+  }
+
+  #map {
+    height: 20rem;
+  }
+
+  .adp-directions tr,
+  .adp-summary {
+    line-height: 2rem;
+  }
+  .adp-summary {
+    padding-left: 2.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .adp-legal {
+    display: none;
+  }
+
+  .map-loading {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}

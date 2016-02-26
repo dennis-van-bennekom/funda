@@ -1,0 +1,121 @@
+.settings {
+  margin-top: 1rem;
+
+  h1 {
+    margin: 0;
+    padding: 1rem 0;;
+
+    font-family: 'proxima nova';
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  form {
+    margin-top: 1rem;
+    padding: 0 1rem;
+
+    .form-inner {
+      margin: 0 auto;
+      max-width: 30rem;
+      padding: 1rem;
+      border-radius: 3px;
+
+      background: #F8B000;
+    }
+
+    .form-group {
+      background: #fff;
+
+      border-radius: 3px;
+    }
+
+    .form-group:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: inline-block;
+      padding: 1rem 0 1rem 0.75rem;
+      font-size: 1rem;
+      width: 2.1rem;
+
+      color: #999;
+    }
+
+    .form-group input {
+      display: inline-block;
+      padding: 1rem 0.75rem;
+      width: calc(100% - 2.4rem);
+
+      font-size: 1rem;
+
+      background: none;
+      border: none;
+
+      color: #3888C5;
+    }
+
+    .form-group input:focus {
+      outline: none;
+    }
+
+    .save {
+      margin-top: 1rem;
+      padding: 1rem 0.75rem;
+      width: 100%;
+
+      font-size: 1rem;
+
+      background-color: #3888C5;
+      color: #fff;
+
+      border: none;
+      border-radius: 3px;
+    }
+
+    .transport {
+      display: flex;
+
+      background: #3888C5;
+
+      border-radius: 3px;
+
+      input {
+        display: none;
+      }
+
+      label {
+        flex-grow: 1;
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      label:first-of-type {
+        border-radius: 3px 0 0 3px;
+      }
+
+      label:last-of-type {
+        border-radius: 0 3px 3px 0;
+      }
+
+      label:hover {
+        cursor: pointer;
+      }
+
+      label svg {
+        width: 1rem;
+        height: 1rem;
+        fill: #fff;
+      }
+
+      input:checked + label {
+        background: #fff;
+      }
+
+      input:checked + label svg {
+        fill: #123;
+      }
+    }
+  }
+}

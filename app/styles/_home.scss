@@ -1,0 +1,84 @@
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.home {
+  margin-top: 1rem;
+
+  h1 {
+    margin: 0;
+    padding: 1rem 0;
+
+    font-family: 'proxima nova';
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .object {
+    animation: fadein 0.5s;
+
+    margin: 1rem;
+    width: 100%;
+    max-width: 30rem;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
+
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .object:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+  }
+
+  .object img {
+    display: block;
+    width: 100%;
+  }
+
+  .object .info-container {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .object .info {
+    padding: 0.8rem 0.75rem;
+    flex-grow: 1;
+  }
+
+  .object a {
+    text-decoration: none;
+
+    color: #333;
+  }
+
+  .object .info .straat {
+    color: #3888C5;
+  }
+
+  .object .info .extra,
+  .object .info .prijs {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .object .info .prijs {
+    font-weight: 600;
+  }
+
+  .object .distance {
+    padding: 0.9rem 1rem;
+    margin-right: 1.25rem;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    color: #777;
+  }
+}
