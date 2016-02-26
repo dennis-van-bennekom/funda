@@ -1,3 +1,3 @@
 # funda
 
-[funda.dennisvanbennekom.com](Bekijk online)
+[http://funda.dennisvanbennekom.com](Bekijk online)
