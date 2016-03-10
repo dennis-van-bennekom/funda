@@ -3,9 +3,9 @@
 
   <div class="sort-options">
     <ul>
-      <li class="sort" id="recent">Recent</li>
-      <li class="sort" id="prijs_aflopend">Prijs ▼</li>
-      <li class="sort" id="prijs_oplopend">Prijs ▲</li>
+      <li class="sort" id="recent" tabindex="0">Recent</li>
+      <li class="sort" id="prijs_aflopend" tabindex="0">Prijs ▼</li>
+      <li class="sort" id="prijs_oplopend" tabindex="0">Prijs ▲</li>
     </ul>
   </div>
 

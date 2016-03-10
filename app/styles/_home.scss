@@ -37,8 +37,35 @@
   }
 
   .object img {
+    position: relative;
     display: block;
     width: 100%;
+    min-height: 15rem;
+  }
+
+  .object img:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f0f0f0;
+      border-bottom: 1px solid #ddd;
+      border-radius: 4px 4px 0 0;
+  }
+
+  .object img:after {
+      content: "Afbeelding kon niet geladen worden: " attr(alt);
+      display: block;
+      color: #333;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      text-align: center;
   }
 
   .object .info-container {
