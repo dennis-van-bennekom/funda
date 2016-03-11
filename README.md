@@ -2,7 +2,11 @@
 
 ## Verbeteringen
 
-- Afbeeldingen fallback gemaakt.
-- Logo is nu een inline SVG.
-- LocalStorage gebruiken met defaults als het uit staat.
-- Noscript toegevoegd met een melding dat de website javascript nodig heeft om te kunnen functioneren.
+- **Afbeeldingen:** fallback gemaakt met ```::before``` en ```::after```.
+- **Custom fonts:** gebruik ik niet.
+- **Kleur:** getest met Sim Daltonism, kleuren zijn goed.
+- **Breedband internet:** 3 seconden laattijd op 3G zonder afbeeldingen. TODO: Afbeeldingen lazy loaden.
+- **Muis/Trackpad doet het niet...:** alles is goed te tabben, bij sommige elementen moest ik een ```tabindex="0"``` toevoegen, omdat het geen standaart input elementen waren.
+- **Javascript (volledig):** de website werkt niet zonder javascript dus ik heb een ```<noscript>``` toegevoegd met een melding daarover.
+- **Cookies:** gebruik ik niet.
+- **Local storage:** defaults zetten in de code ```var min = store.get('PRICE_MIN') || 0;```.
