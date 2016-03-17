@@ -23,4 +23,4 @@ if (navigator.geolocation) {
 }
 ```
 
-Voor meer info bekijk de source code van `funda/app/scripts/controller.js`.
+Voor meer info bekijk de source code van [funda/app/scripts/controller.js](https://github.com/dennis-van-bennekom/funda/blob/browser-tech/avv2/app/scripts/controller.js#L5).
