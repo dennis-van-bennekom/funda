@@ -1,6 +1,6 @@
 # Browser Technologies 
 
-## Fallback
+## Geolocation fallback
 
 - Fallback gemaakt voor als de gebruiker geen geolocatie heeft of geen toestemming hiervoor geeft.
 
@@ -11,16 +11,16 @@ Ik heb een functie gemaakt die ervoor zorgt dat de fallback template geladen wor
 ```javascript
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
-    data => {
+    position => {
       // Doe leuke dingen met de geolocatie
     },
     () => { // Error callback
-      fallback();
+      showFallback();
     }
   )
 } else {
-  fallback();
+  showFallback();
 }
 ```
 
-Voor meer info bekijk de source code van `controller.js`.
+Voor meer info bekijk de source code van `funda/app/scripts/controller.js`.
