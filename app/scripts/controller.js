@@ -33,14 +33,53 @@ var controller = (function() {
             });
           });
         });
-      });
+      },
+      () => {
+        showFallback();
+      }
+    );
+    } else {
+      showFallback();
     };
   };
 
+  var showFallback = function() {
+    render('fallback', {}, () => {
+      document.getElementById('fallback-form').addEventListener('submit', (e) => {
+        var search = e.target[0].value.trim();
+
+        api.getObjects('', search, (objects) => {
+          var currentPosition = 'Amsterdam';
+
+          var from = [];
+          var to = [];
+
+          objects.forEach(object => {
+            from.push(currentPosition);
+            to.push(object.Woonplaats + ' ' + object.Adres);
+          });
+
+          api.getDistanceAndTime(from, to, (data) => {
+            objects = objects.map((object, index) => {
+              object.Distance = data[index].distance;
+              object.Duration = data[index].duration;
+
+              return object;
+            });
+
+            render('home', objects);
+          });
+        });
+
+        e.preventDefault();
+      });
+    });
+  }
+
   var settings = function() {
-    var min = store.get('PRICE_MIN');
-    var max = store.get('PRICE_MAX');
-    var transport = store.get('TRANSPORT');
+    var min = store.get('PRICE_MIN') || 0;
+    var max = store.get('PRICE_MAX') || 1000000;
+    var transport = store.get('TRANSPORT') || 'WALKING';
 
     render('settings', {
       min: min,
@@ -84,7 +123,7 @@ var controller = (function() {
 
         var isSaved = false;
 
-        saved.forEach(object => {
+        saved.forEach(object => { 
           if (object.InternalId === guid) {
             isSaved = true;
           }

@@ -1,0 +1,8 @@
+<div class="loading">
+  <h2>Geolocatie niet ondersteund of toegestaan.</h2>
+  <form id="fallback-form">
+    <label for="zoek">Zoek plaatsnaam:</label>
+    <input id="zoek" type="text">
+    <button id="search">Zoek</button>
+  </form>
+</div>
