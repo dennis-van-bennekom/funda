@@ -11,3 +11,5 @@
 - **Cookies:** gebruik ik niet.		
 - **Local storage:** defaults zetten in de code ```var min = store.get('PRICE_MIN') || 0;```.
 - **Geolocation fallback:** geen geolocation? handmatige input.
+
+[Link naar gh-pages](https://dennis-van-bennekom.github.io/funda)
